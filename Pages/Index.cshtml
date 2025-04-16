@@ -1,0 +1,27 @@
+﻿@page
+@model WebApiDemo.Pages.IndexModel
+@{
+    ViewData["Title"] = "Usuários da API";
+}
+
+<h1>Lista de Usuários</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model.Usuarios)
+        {
+            <tr>
+                <td>@usuario.Id</td>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
